@@ -114,12 +114,16 @@ console.log(division(7, 2));
 
 // 10
 function numerosMayoresQue5 (array) {
+    if(!Array.isArray(array))
+        return console.log("El parametro recibido no es un array")
     return array.filter(numero => numero > 5);
 }
 console.log(numerosMayoresQue5([3, 6, 8, 2]))
 
 // 11
 function esNumeroPrimo(numero){
+    if(typeof numero !== 'number')
+        return console.log("El valor introducido no es número")
     if(numero < 1)
         return console.log("El numero introducido no puede ser 0 o negativo")
     for(let i = 2; i < numero; i++) {
@@ -138,12 +142,16 @@ esNumeroPrimo(13);
 
 // 1
 function obtenerImpares(array) {
+    if(!Array.isArray(array))
+        return console.log("El parametro recibido no es un array")
     return array.filter(numero => numero % 2 ); // si es 0 es false y no se guardan los pares
 }
 console.log(obtenerImpares([23, 11, 6, 78, 103]));
 
 // 2
 function sumarArray(array) {
+    if(!Array.isArray(array))
+        return console.log("El parametro recibido no es un array")
     let resultado = 0;
     for(const element of array)
         resultado += element;
@@ -153,6 +161,8 @@ console.log(sumarArray([1, 2, 3]))
 
 // 3
 function multiplicarArray(array) {
+    if(!Array.isArray(array))
+        return console.log("El parametro recibido no es un array")
     let resultado = 1;
     for(const element of array) 
         resultado *= element;
